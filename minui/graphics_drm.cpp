@@ -30,6 +30,10 @@
 
 #include "minui/minui.h"
 
+#ifndef __LP64__
+#define mmap mmap64
+#endif
+
 #define ARRAY_SIZE(A) (sizeof(A)/sizeof(*(A)))
 
 MinuiBackendDrm::MinuiBackendDrm()
