@@ -151,10 +151,8 @@ static drm_surface *drm_create_surface(int width, int height) {
     format = DRM_FORMAT_RGBA8888;
 #elif defined(RECOVERY_BGRA)
     format = DRM_FORMAT_ARGB8888;
-#elif defined(RECOVERY_RGBX)
-    format = DRM_FORMAT_XBGR8888;
 #else
-    format = DRM_FORMAT_RGB565;
+    format = DRM_FORMAT_XBGR8888;
 #endif
 
     memset(&create_dumb, 0, sizeof(create_dumb));
